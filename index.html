@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10 Games Mobile Collection</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content container">
+        <p class="hero__eyebrow">Android + iOS</p>
+        <h1>10 Games + Playable Game Code</h1>
+        <p class="hero__description">
+          Browse 10 game ideas and instantly play lightweight mini-games directly
+          on the page.
+        </p>
+
+        <div class="selector" aria-label="Game selector">
+          <label for="game-selector">Choose a game card:</label>
+          <select id="game-selector" name="game-selector">
+            <option value="all">Show all games</option>
+            <option value="sky-jumper">Sky Jumper</option>
+            <option value="puzzle-forge">Puzzle Forge</option>
+            <option value="nitro-kart-rush">Nitro Kart Rush</option>
+            <option value="kingdom-tactics">Kingdom Tactics</option>
+            <option value="island-survivor">Island Survivor</option>
+            <option value="goal-legends">Goal Legends</option>
+            <option value="shadow-ops">Shadow Ops</option>
+            <option value="word-blitz">Word Blitz</option>
+            <option value="bubble-blast-party">Bubble Blast Party</option>
+            <option value="dungeon-crawler-x">Dungeon Crawler X</option>
+          </select>
+        </div>
+
+        <div class="hero__actions">
+          <a class="store-btn" href="#" aria-label="Download on Google Play">Google Play</a>
+          <a class="store-btn store-btn--ios" href="#" aria-label="Download on App Store">App Store</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="games" id="games" aria-label="Game list">
+        <article class="game-card" data-game="sky-jumper"><h2>1. Sky Jumper</h2><p>Jump between floating platforms and beat gravity.</p><span class="tag">Arcade</span></article>
+        <article class="game-card" data-game="puzzle-forge"><h2>2. Puzzle Forge</h2><p>Match symbols and unlock intricate logic challenges.</p><span class="tag">Puzzle</span></article>
+        <article class="game-card" data-game="nitro-kart-rush"><h2>3. Nitro Kart Rush</h2><p>Drift through neon tracks with touch-first controls.</p><span class="tag">Racing</span></article>
+        <article class="game-card" data-game="kingdom-tactics"><h2>4. Kingdom Tactics</h2><p>Build your squad and conquer enemies in turn-based battles.</p><span class="tag">Strategy</span></article>
+        <article class="game-card" data-game="island-survivor"><h2>5. Island Survivor</h2><p>Craft tools, gather food, and survive wild weather.</p><span class="tag">Adventure</span></article>
+        <article class="game-card" data-game="goal-legends"><h2>6. Goal Legends</h2><p>Swipe to score incredible goals in fast 1v1 matches.</p><span class="tag">Sports</span></article>
+        <article class="game-card" data-game="shadow-ops"><h2>7. Shadow Ops</h2><p>Stealth, strategy, and gadgets in short tactical missions.</p><span class="tag">Action</span></article>
+        <article class="game-card" data-game="word-blitz"><h2>8. Word Blitz</h2><p>Race the timer and build long words for top scores.</p><span class="tag">Word</span></article>
+        <article class="game-card" data-game="bubble-blast-party"><h2>9. Bubble Blast Party</h2><p>Pop colorful combos with smooth haptic feedback.</p><span class="tag">Casual</span></article>
+        <article class="game-card" data-game="dungeon-crawler-x"><h2>10. Dungeon Crawler X</h2><p>Explore dark dungeons, collect loot, and battle bosses.</p><span class="tag">RPG</span></article>
+      </section>
+
+      <section class="playground" aria-label="Playable mini games">
+        <h2>Play Game Code</h2>
+        <p class="muted">Choose a mini-game, press Start, use Action each round, Reset anytime, or open it on Replit web.</p>
+
+        <div class="playground__controls">
+          <select id="mini-game-selector"></select>
+          <button id="start-game" type="button">Start</button>
+          <button id="action-btn" type="button">Action</button>
+          <button id="reset-game" type="button">Reset</button>
+          <a id="open-replit" class="replit-btn" href="https://replit.com/" target="_blank" rel="noopener noreferrer">To Replit Web</a>
+        </div>
+
+        <ol class="play-steps" aria-label="How to play mini games">
+          <li>Choose a mini-game in the dropdown.</li>
+          <li>Press Start.</li>
+          <li>Follow status instructions.</li>
+          <li>Press Action each round.</li>
+          <li>Press Reset anytime to restart current game.</li>
+        </ol>
+
+        <p id="game-status" class="game-status">Ready.</p>
+        <div id="game-input-zone" class="game-input-zone"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> 10 Games Studio. Available on Android & iOS.</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
